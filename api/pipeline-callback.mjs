@@ -24,6 +24,8 @@ export default async function handler(req, res) {
     if (pr_number) patch.pr_number = pr_number
     if (preview_url) patch.preview_url = preview_url
     if (error_message !== undefined) patch.error_message = error_message
+    // A fresh run always clears any stale failure note
+    if (status === 'processing') patch.error_message = null
 
     await updateRequest(requestId, patch)
     res.status(200).json({ ok: true })
