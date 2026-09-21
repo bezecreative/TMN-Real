@@ -1,4 +1,36 @@
 {
+  "redirects": [
+    {
+      "source": "/what-we-do",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-do/(.*)",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/where-we-work",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/who-we-are",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/clients",
+      "destination": "/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

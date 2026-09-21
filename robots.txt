@@ -4,4 +4,4 @@ Disallow: /login
 Disallow: /dashboard
 Disallow: /admin
 
-Sitemap: https://tmn.wearemox.com/sitemap.xml
+Sitemap: https://www.tmnevents.com/sitemap.xml

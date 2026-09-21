@@ -16,6 +16,8 @@ export const config = { SOURCE_REPO, PIPELINE_SECRET }
 export function applyCors(req, res) {
   const origin = req.headers.origin || ''
   const ok =
+    origin === 'https://www.tmnevents.com' ||
+    origin === 'https://tmnevents.com' ||
     origin === 'https://tmn.wearemox.com' ||
     origin.endsWith('.vercel.app') ||
     origin.startsWith('http://localhost')
