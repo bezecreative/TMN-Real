@@ -55,7 +55,7 @@
       "destination": "/snapshots/$1/$2.html"
     },
     {
-      "source": "/(services|case-studies|about|contact|faq)",
+      "source": "/(services|case-studies|about|contact)",
       "has": [
         {
           "type": "header",
