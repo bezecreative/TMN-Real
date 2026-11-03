@@ -33,8 +33,41 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(GPTBot|OAI-SearchBot|ChatGPT-User|ClaudeBot|Claude-User|Claude-SearchBot|anthropic-ai|PerplexityBot|Perplexity-User|cohere-ai|meta-externalagent|Amazonbot|CCBot|Bytespider).*"
+        }
+      ],
+      "destination": "/snapshots/index.html"
+    },
+    {
+      "source": "/(services|case-studies)/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(GPTBot|OAI-SearchBot|ChatGPT-User|ClaudeBot|Claude-User|Claude-SearchBot|anthropic-ai|PerplexityBot|Perplexity-User|cohere-ai|meta-externalagent|Amazonbot|CCBot|Bytespider).*"
+        }
+      ],
+      "destination": "/snapshots/$1/$2.html"
+    },
+    {
+      "source": "/(services|case-studies|about|contact|faq)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(GPTBot|OAI-SearchBot|ChatGPT-User|ClaudeBot|Claude-User|Claude-SearchBot|anthropic-ai|PerplexityBot|Perplexity-User|cohere-ai|meta-externalagent|Amazonbot|CCBot|Bytespider).*"
+        }
+      ],
+      "destination": "/snapshots/$1.html"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/app.html"
     }
   ],
   "headers": [
